@@ -3,7 +3,7 @@ import { type NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
     try {
         const { cart } = await req.json();
-        const response = await createOrder(cart);
+        const response = await createOrder();
 
         // Return the response wrapped in a NextResponse object
         return NextResponse.json(response); // Sending back JSON response with a 200 status by default
