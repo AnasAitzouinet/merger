@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
     try {
@@ -41,7 +41,7 @@ const generateAccessToken = async () => {
     return data.access_token;
 }
 
-const createOrder = async (cart: any) => {
+const createOrder = async () => {
     const accessToken = await generateAccessToken();
  
     const response = await fetch("https://api-m.sandbox.paypal.com/v2/checkout/orders", {

@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest , NextResponse } from "next/server";
 
 const generateAccessToken = async () => {
     const { PAYPAL_CLIENT_ID, PAYPAL_SECRET } = process.env;
